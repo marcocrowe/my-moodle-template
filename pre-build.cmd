@@ -1,0 +1,1 @@
+pipreqs --scan-notebooks --force
