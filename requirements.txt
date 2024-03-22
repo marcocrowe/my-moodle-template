@@ -1,1 +1,1 @@
-my_moodle==0.3.7
+my_moodle==0.3.8
