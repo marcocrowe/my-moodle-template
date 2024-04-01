@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
 Using <https://moodle.midwest.tus.ie/> as an example:
 
-1. Open <https://moodle.midwest.tus.ie//user/managetoken.php>
+1. Open <https://moodle.midwest.tus.ie/user/managetoken.php>
 2. Copy the key for 'Moodle mobile web service'.
 3. The key is saved to a file [config.ini](config.ini)
 
