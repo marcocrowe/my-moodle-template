@@ -3,44 +3,35 @@ Copyright © 2024 Mark Crowe <https://github.com/marcocrowe>. All rights reserve
 Main module to run the program
 """
 
-from my_moodle import (
-    __version__,
-    ConfigUtility,
-    CourseStatus,
-    MoodleDataDownloader,
-    MoodleDataUtility,
-)
+from os import getcwd
+from my_moodle import ConfigUtility, CourseStatus, DataUtility, MoodleDataDownloader
 
 
 def main() -> None:
     """Main function"""
 
-    print(f"Using my_moodle version: {__version__}\n")
-
+    MoodleDataDownloader.display_version()
     program, server, token = ConfigUtility.check_and_read_config()
+    moodle_data_downloader = MoodleDataDownloader(program, server, token, getcwd())
 
-    moodle_data_downloader = MoodleDataDownloader(program, server, token, data_dir="")
+    courses = moodle_data_downloader.download_my_json_data()
 
-    courses: list = moodle_data_downloader.download_courses()
     for course in courses:
-        course["tiny-url"] = MoodleDataUtility.create_tiny_url(course["viewurl"])
+        course["tiny-url"] = DataUtility.create_tiny_url(course["viewurl"])
+
+    active_courses = DataUtility.get_courses_by_status(courses, CourseStatus.ACTIVE)
+    favourite_courses: list = DataUtility.get_courses_favoured(courses)
 
     print("Courses: All")
-    print(MoodleDataUtility.create_data_frame(courses, url_column="tiny-url"))
+    print(DataUtility.create_data_frame(courses, url_column="tiny-url"))
     print()
-
-    active_courses: list = MoodleDataUtility.get_courses_by_status(
-        courses, CourseStatus.ACTIVE
-    )
 
     print("Courses: Active")
-    print(MoodleDataUtility.create_data_frame(active_courses, url_column="tiny-url"))
+    print(DataUtility.create_data_frame(active_courses, url_column="tiny-url"))
     print()
 
-    favourite_courses: list = MoodleDataUtility.get_courses_favoured(courses)
-
     print("Courses: Favourite")
-    print(MoodleDataUtility.create_data_frame(favourite_courses, url_column="tiny-url"))
+    print(DataUtility.create_data_frame(favourite_courses, url_column="tiny-url"))
     print()
 
 
