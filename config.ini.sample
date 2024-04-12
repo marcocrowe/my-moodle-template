@@ -1,4 +1,4 @@
 [User]
 program = Content Management Systems
 server = https://moodle.midwest.tus.ie
-token = INSERT_YOUR_TOKEN # e.g. 63c1774a3eaf47db816c57ba1abafd40
+token = INSERT_YOUR_TOKEN

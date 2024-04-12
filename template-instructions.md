@@ -60,10 +60,10 @@ Using <https://moodle.midwest.tus.ie/> as an example:
 [User]
 program = Content Management Systems
 server = https://moodle.midwest.tus.ie/
-token = INSERT_YOUR_TOKEN # e.g. 63c1774a3eaf47db816c57ba1abafd40
+token = INSERT_YOUR_TOKEN
 ```
 
-*Note: The token is a secret key, do not share it with anyone.*
+*Note: The token is a secret key, do not share it with anyone. Usually it is GUID like e.g. **63c1774a3eaf47db816c57ba1abafd40***
 
 ---
 Copyright &copy; 2024 Mark Crowe <https://github.com/marcocrowe>. All rights reserved.
