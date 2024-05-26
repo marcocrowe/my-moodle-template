@@ -1,3 +1,4 @@
+
 # [My Moodle](https://github.com/marcocrowe/my-moodle-template "My Moodle")
 
 This repository is a template for a Python package to download data from Moodle. Press the button below to use this template to create a new repository:

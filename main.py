@@ -23,15 +23,15 @@ def main() -> None:
     favourite_courses: list = DataUtility.get_courses_favoured(courses)
 
     print("Courses: All")
-    print(DataUtility.create_data_frame(courses, url_column="tiny-url"))
+    print(DataUtility.create_table(courses, url_column="tiny-url"))
     print()
 
     print("Courses: Active")
-    print(DataUtility.create_data_frame(active_courses, url_column="tiny-url"))
+    print(DataUtility.create_table(active_courses, url_column="tiny-url"))
     print()
 
     print("Courses: Favourite")
-    print(DataUtility.create_data_frame(favourite_courses, url_column="tiny-url"))
+    print(DataUtility.create_table(favourite_courses, url_column="tiny-url"))
     print()
 
 
