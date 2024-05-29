@@ -6,7 +6,7 @@ Update template
 from os import getcwd
 from my_moodle import update_my_moodle_template
 
-CURRENT_VERSION = "1.0.4"
+CURRENT_VERSION = "1.0.5"
 
 
 def main():
