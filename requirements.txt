@@ -1,1 +1,2 @@
+ipython==8.15.0
 my_moodle==0.4.6
