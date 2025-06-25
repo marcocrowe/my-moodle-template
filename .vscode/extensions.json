@@ -1,13 +1,10 @@
 {
 	"recommendations": [
-		"alanwalk.markdown-navigation",
 		"davidanson.vscode-markdownlint",
 		"streetsidesoftware.code-spell-checker",
 		"yzhang.markdown-all-in-one",
 		"maptz.camelcasenavigation",
-		"wmaurer.change-case",
 		"bierner.markdown-footnotes",
-		"mdickin.markdown-shortcuts",
 		"darkriszty.markdown-table-prettify",
 		"cweijan.vscode-office",
 		"wraith13.open-in-github-desktop",
